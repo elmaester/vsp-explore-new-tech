@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem, selectList } from './listSlice';
+import { OutlinedInput, Button } from '@mui/material';
 
 const List = () => {
 	const dispatch = useDispatch();
@@ -13,22 +14,32 @@ const List = () => {
 	};
 	return (
 		<div>
-			<input
+			<OutlinedInput
 				type='text'
 				name='listItem'
 				id='listItem'
 				value={newItem}
+				autoFocus
 				onChange={(e) => setNewItem(e.target.value)}
 				onKeyDown={(e) => e.key === 'Enter' && handleNewItemAdd()}
 			/>
-			<button onClick={handleNewItemAdd}>Add</button>
-			<div className='ag-theme-alpine' style={{ width: 402, height: 50 + (43 * list.length), marginTop: "30px" }}>
-				<AgGridReact
-					rowData={list}
-					columnDefs={[{ field: 'id' }, { field: 'item' }]}
-					defaultColDef={{ sortable: true }}
-				/>
-			</div>
+			<Button onClick={handleNewItemAdd}>Add</Button>
+			{!!list.length && (
+				<div
+					className='ag-theme-alpine'
+					style={{
+						width: 402,
+						height: 51 + 42 * list.length,
+						marginTop: '30px',
+					}}
+				>
+					<AgGridReact
+						rowData={list}
+						columnDefs={[{ field: 'id' }, { field: 'item' }]}
+						defaultColDef={{ sortable: true }}
+					/>
+				</div>
+			)}
 		</div>
 	);
 };
