@@ -3,7 +3,7 @@ import {
 	createBrowserRouter,
 	RouterProvider,
 } from 'react-router-dom';
-import Layout from './features/layout';
+import Layout from './app/Layout';
 import List from './features/list/List';
 import { Counter } from './features/counter/Counter';
 import './App.css';
