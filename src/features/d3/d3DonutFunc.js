@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 // Released under the ISC license.
 // https://observablehq.com/@d3/donut-chart
 function d3DonutFunc(
+	svg,
 	data,
 	{
 		name = ([x]) => x, // given d in data, returns the (ordinal) label
@@ -62,8 +63,9 @@ function d3DonutFunc(
 	const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
 	const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
 
-	const svg = d3
-		.select('.donut')
+	svg.selectAll('*').remove();
+
+	svg
 		.attr('width', width)
 		.attr('height', height)
 		.attr('viewBox', [-width / 2, -height / 2, width, height])
