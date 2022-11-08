@@ -10,28 +10,28 @@ import DonutChart from './features/d3/DonutChart';
 import getHairCount from './features/d3/getHairCount';
 
 const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Layout />,
-		children: [
-			{
-				path: '/counter',
-				element: <Counter />,
-			},
-			{
-				path: '/list',
-				element: <List />,
-			},
-			{
-				path: '/donut',
-				element: <DonutChart data={getHairCount()} />,
-			},
-		],
-	},
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        path: '/counter',
+        element: <Counter />,
+      },
+      {
+        path: '/list',
+        element: <List />,
+      },
+      {
+        path: '/donut',
+        element: <DonutChart data={getHairCount()} />,
+      },
+    ],
+  },
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
