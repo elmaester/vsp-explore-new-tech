@@ -14,6 +14,9 @@ const Layout = () => (
 			<Button component={Link} to='counter'>
 				Counter
 			</Button>
+			<Button component={Link} to='donut'>
+				Donut
+			</Button>
 		</nav>
 		<div className='App-header'>
 			<Outlet />
