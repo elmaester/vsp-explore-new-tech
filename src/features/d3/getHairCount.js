@@ -1,6 +1,4 @@
-import people from '../../data/people';
-
-const getHairCount = () => {
+const getHairCount = (people) => {
   const hairCountObj = {};
   people.forEach((person) => {
     if (!hairCountObj[person.hair_color]) {

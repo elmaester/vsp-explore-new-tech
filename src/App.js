@@ -8,6 +8,7 @@ import List from './features/list/List';
 import { Counter } from './features/counter/Counter';
 import DonutChart from './features/d3/DonutChart';
 import getHairCount from './features/d3/getHairCount';
+import people from './data/people';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/donut',
-        element: <DonutChart data={getHairCount()} />,
+        element: <DonutChart data={getHairCount(people)} />,
       },
     ],
   },
