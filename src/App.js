@@ -11,6 +11,8 @@ import getHairCount from './features/d3/getHairCount';
 import people from './data/people';
 import BarChart from './features/d3/BarChart';
 import getHeightCount from './features/d3/getHeightCount';
+import miserables from './data/miserables.json'
+import FDGraph from './features/d3/FDGraph';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/bar',
         element: <BarChart data={getHeightCount(people)} />,
+      },
+      {
+        path: '/graph',
+        element: <FDGraph data={miserables} />,
       },
     ],
   },
