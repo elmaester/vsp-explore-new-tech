@@ -13,6 +13,7 @@ import BarChart from './features/d3/BarChart';
 import getHeightCount from './features/d3/getHeightCount';
 import miserables from './data/miserables.json'
 import FDGraph from './features/d3/FDGraph';
+import { AgGrid } from "./features/list/AgGrid";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: '/graph',
         element: <FDGraph data={miserables} />,
       },
+      {
+        path: '/aggrid',
+        element: <AgGrid data={people} />,
+      }
     ],
   },
 ]);
