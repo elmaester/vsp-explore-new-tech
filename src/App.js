@@ -11,9 +11,10 @@ import getHairCount from './features/d3/getHairCount';
 import people from './data/people';
 import BarChart from './features/d3/BarChart';
 import getHeightCount from './features/d3/getHeightCount';
-import miserables from './data/miserables.json'
+import miserables from './data/miserables.json';
 import FDGraph from './features/d3/FDGraph';
-import { AgGrid } from "./features/list/AgGrid";
+import { AgGrid } from './features/list/AgGrid';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
       {
         path: '/aggrid',
         element: <AgGrid data={people} />,
-      }
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />,
+      },
     ],
   },
 ]);

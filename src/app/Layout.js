@@ -24,7 +24,10 @@ const Layout = () => (
         Graph
       </Button>
       <Button component={Link} to='aggrid'>
-        AG GRID
+        AG Grid
+      </Button>
+      <Button component={Link} to='dashboard'>
+        Dashboard
       </Button>
     </nav>
     <div className='App-header'>
