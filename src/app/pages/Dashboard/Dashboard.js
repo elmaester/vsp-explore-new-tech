@@ -1,7 +1,7 @@
 import React from 'react';
 import { Unstable_Grid2 as Grid } from '@mui/material';
-import DashboardSectionContainer from '../DashboardSectionContainer/DashboardSectionContainer';
-import DashboardCardWidget from '../DashboardCardWidget/DashboardCardWidget';
+import DashboardSectionContainer from '../../../components/DashboardSectionContainer/DashboardSectionContainer';
+import DashboardCardWidget from '../../../components/DashboardCardWidget/DashboardCardWidget';
 
 const Dashboard = () => (
   <Grid container spacing={2} sx={{ minHeight: '100vh' }}>

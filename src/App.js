@@ -12,7 +12,7 @@ import BarChart from './features/d3/BarChart';
 import miserables from './data/miserables.json';
 import FDGraph from './features/d3/FDGraph';
 import { AgGrid } from './features/list/AgGrid';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './app/pages/Dashboard/Dashboard';
 import {
   fdGraphParams,
   hairCount,
