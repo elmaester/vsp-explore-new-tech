@@ -1,5 +1,5 @@
 import { AgGridReact } from 'ag-grid-react';
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import 'ag-grid-enterprise';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
